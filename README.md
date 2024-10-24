@@ -56,6 +56,51 @@ Implementować różne typy dziedziczenia w C++ i Java.
 Stosować klasy abstrakcyjne oraz nadpisywać metody abstrakcyjne w klasach dziedziczących.
 Rozróżniać między dziedziczeniem publicznym, chronionym i prywatnym oraz rozumieć, jak każdy z tych typów wpływa na dostępność metod i atrybutów w klasach pochodnych.
 
+## **Zadanie 7: Dziedziczenie wielokrotne (Multiple Inheritance) w C++**
+### **Opis zadania:**
+W C++ można dziedziczyć po wielu klasach bazowych, co nazywa się dziedziczeniem wielokrotnym (multiple inheritance). W tym zadaniu utworzymy dwie klasy bazowe, a następnie utworzymy klasę dziedziczącą po obu z nich.
+
+#### **Kroki:**
+1. Stwórz klasę `Silnikowy` z metodą `przyspiesz()`.
+2. Stwórz klasę `Elektryczny` z metodą `ladowanie()`.
+3. Stwórz klasę `Hybryda`, która dziedziczy po obu klasach bazowych i łączy ich funkcjonalność.
+   
+**Wyjaśnienie:**
+W przykładzie klasa `Hybryda` dziedziczy po dwóch klasach: `Silnikowy` i `Elektryczny`. Ma dostęp do metod obu klas bazowych oraz nadpisuje metodę `przyspiesz()`, aby łączyć obie funkcjonalności.
+
+## **Zadanie 8: Dziedziczenie wielokrotne (Multiple Inheritance) w Java za pomocą interfejsów**
+### **Opis zadania:**
+Java nie obsługuje bezpośrednio dziedziczenia wielokrotnego dla klas, ale pozwala na dziedziczenie wielokrotne za pomocą interfejsów. W tym zadaniu utworzymy dwa interfejsy, a następnie klasę, która implementuje oba z nich.
+
+#### **Kroki:**
+1. Stwórz interfejs `Silnikowy` z metodą `przyspiesz()`.
+2. Stwórz interfejs `Elektryczny` z metodą `ladowanie()`.
+3. Stwórz klasę `Hybryda`, która implementuje oba interfejsy.
+
+**Wyjaśnienie:**
+W przykładzie klasa `Hybryda` implementuje dwa interfejsy: `Silnikowy` i `Elektryczny`, co pozwala na dziedziczenie wielokrotne funkcjonalności z różnych źródeł, zachowując czystość obiektową w Java.
+
+## **Zadanie 9: Dziedziczenie wielopoziomowe (Multilevel Inheritance)**
+### **Opis zadania:**
+W dziedziczeniu wielopoziomowym jedna klasa dziedziczy po innej, a następnie kolejna klasa dziedziczy po klasie pochodnej, tworząc łańcuch dziedziczenia.
+
+#### **Kroki:**
+1. Stwórz klasę `Pojazd` z podstawowymi metodami.
+2. Stwórz klasę `Samochod`, która dziedziczy po `Pojazd`.
+3. Stwórz klasę `ElektrycznySamochod`, która dziedziczy po `Samochod` i nadpisuje metodę `przyspiesz()`.
+
+## **Zadanie 10: Dziedziczenie hybrydowe i wielościeżkowe (Hybrid/Multipath Inheritance)**
+### **Opis zadania:**
+Dziedziczenie hybrydowe (wielościeżkowe) łączy różne typy dziedziczenia, np. dziedziczenie wielopoziomowe i hierarchiczne. W wielościeżkowym dziedziczeniu może wystąpić problem diamentu, który można rozwiązać za pomocą funkcji wirtualnych w C++.
+
+#### **Kroki:**
+1. Stwórz klasę bazową `Pojazd` z metodą `przyspiesz()`.
+2. Stwórz dwie klasy pośrednie: `Silnikowy` i `Elektryczny`, które dziedziczą po `Pojazd`.
+3. Stwórz klasę `Hybryda`, która dziedziczy zarówno po `Silnikowy`, jak i `Elektryczny`. Zastosuj funkcje wirtualne, aby rozwiązać problem diamentu.
+
+**Kod w Java:**
+W Java dziedziczenie wielościeżkowe nie jest bezpośrednio obsługiwane. Możemy jednak użyć interfejsów, aby symulować podobne zachowanie.
+
 ## **Podsumowanie**
 Podczas tego laboratorium studenci:
 Nauczyli się implementować dziedziczenie w językach C++ i Java.
